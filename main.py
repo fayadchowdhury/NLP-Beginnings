@@ -8,10 +8,18 @@ import SVMTextClassifier as svmtc
 #WORD VECTOR
 import WordVectors as wv
 
+#Regular Expressions
+import re
+
 if __name__ == '__main__':
     trainx = np.array(['I love the book', 'this is a great book', 'the fit is great', 'i love the shoes'])
     trainy = np.array(['book', 'book', 'clothing', 'clothing'])
     testx = np.array(['I love stories'])
+
+    regexp = re.compile(r"ab[^\s]*cd")
+
+    # print(re.match(regexp, "abcd")) # Matches strictly to expression pattern, None if no match found, otherwise a match object
+    print(re.search(regexp, "aa ab cd dd")) # Does something, I really need to understand regex-es better
 
     # SpaCy tidbits
     # nlp = spacy.load("en_core_web_md") #Load up

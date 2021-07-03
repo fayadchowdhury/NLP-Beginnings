@@ -54,3 +54,13 @@ Then we use a regular linear SVM classifier to train (first fit, then predict) t
 
 Drawbacks: If there are multiple words in the same sentence, the importance of one word may be gradually lost.
 Also since word embeddings are the same, the same word used in different places to imply different meanings may not be picked up accurately by these word embeddings
+
+
+##Regexes:
+
+###Link: https://regexr.com/
+
+Regular expressions to figure out text string patterns.
+
+Can be used to check emails, phone numbers, passwords etc.
+

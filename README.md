@@ -64,3 +64,25 @@ Regular expressions to figure out text string patterns.
 
 Can be used to check emails, phone numbers, passwords etc.
 
+PUT IN A LOT MORE WORK HERE!!!
+
+
+##Stemming/Lemmatization:
+
+###Link: https://www.nltk.org/
+Both are techniques to normalize text
+
+reading -> read
+
+books -> book
+
+stories -> stori (stemming) or story (lemmatization)
+
+Stemming does not guarantee the formation of a legiimate English word, lemmatization checks in the English dictionary and returns an actual English word.
+This is a drawback of stemming and could sometimes lead to conflicts between two words that don't exist.
+Also, punctuation gets treated as its own token.
+
+Stopwords is the list of the most common words in the English dictionary that do not add meaning to the sentence.
+They need to be removed to better capture the meaning and semantics of the sentence.
+
+We use NLTK for these things.

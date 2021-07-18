@@ -86,3 +86,10 @@ Stopwords is the list of the most common words in the English dictionary that do
 They need to be removed to better capture the meaning and semantics of the sentence.
 
 We use NLTK for these things.
+
+
+##Random tidbits pt.2:
+
+###Link: https://textblob.readthedocs.io/en/dev/
+
+Spell correcting, POS tagging, sentiment analysis

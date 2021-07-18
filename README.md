@@ -16,7 +16,7 @@ Limitation: If the word does not occur in the training dictionary, the model wil
 
 Extension -> We tried to classify sentences using an SVM (support vector machine; supervised learning model). We trained (or "fitted") it on the BOW representation of some input text and then we tried to classify some test text.
 
-The code is mainly found in SVMTextxClassifier.py
+The code is mainly found in SVMTextClassifier.py
 
 
 ##Random tidbits:
@@ -52,7 +52,10 @@ The entire sentence or document is then an average of the individual word vector
 
 Then we use a regular linear SVM classifier to train (first fit, then predict) to predict the topic (??)
 
-Drawbacks: If there are multiple words in the same sentence, the importance of one word may be gradually lost.
+Drawbacks: 
+
+If there are multiple words in the same sentence, the importance of one word may be gradually lost.
+
 Also since word embeddings are the same, the same word used in different places to imply different meanings may not be picked up accurately by these word embeddings
 
 
@@ -93,3 +96,30 @@ We use NLTK for these things.
 ###Link: https://textblob.readthedocs.io/en/dev/
 
 Spell correcting, POS tagging, sentiment analysis
+
+
+##State of the art models
+
+###RNNs
+Word vectors are trained once and using them later may often ignore contextual meanings.
+RNNs aim to solve that problem.
+Words are fed into the network one at a time.
+A hidden state (an aggregate, averaged embedding) would be produced based on that word; this hidden state will be passed on to the next recurrent unit along with the next word.
+The final hidden state (the overall embedding or encoding of the sentence) is of particular instance.
+
+Drawbacks:
+
+Long dependencies do not necessarily work well.
+
+Because of the sequential nature of RNNs, they cannot benefit from parallelization and multiple GPUs; a lot of computational resources are required to achieve simple tasks.
+
+###Attention Is All You Need (GODDAMMIT! -_-)
+
+The entire sentence can be passed at a time and depending on word or token the network is looking at, it will ask questions about the token to figure out relevant tokens.
+Works very well with long-range dependencies.
+
+####BERT
+Bidirectional Encoder Representations from Transformers.
+This can be used as an alternative text processing engine with better encodings than the core spacy web models.
+This is not the end-all-be-all solution to all your NLP problems.
+In most cases, this is just a very good starting point as a source for amazing encodings that aren't simply corpus averages.

@@ -73,14 +73,14 @@ if __name__ == '__main__':
     # print("Lemmatized stopped text")
     # print(lemmatized_stopped_text)
 
-    cp_happy = cp.coolProcessing(wanky_happy_text)
-    cp_sad = cp.coolProcessing(wanky_sad_text)
-
-    print(cp_happy.correctSpelling()) # So close
-    print(cp_happy.sentiment()) # A high positive polarity score = good and vice versa
-    print(cp_happy.posTags()) # Need to understand the tags a little better
-
-    print(cp_sad.correctSpelling()) # Stays fairly wanky
-    print(cp_sad.sentiment()) # Cannot detect sentiment (y tho?)
-    print(cp_sad.posTags())
+    # cp_happy = cp.coolProcessing(wanky_happy_text)
+    # cp_sad = cp.coolProcessing(wanky_sad_text)
+    #
+    # print(cp_happy.correctSpelling()) # So close
+    # print(cp_happy.sentiment()) # A high positive polarity score = good and vice versa
+    # print(cp_happy.posTags()) # Need to understand the tags a little better
+    #
+    # print(cp_sad.correctSpelling()) # Stays fairly wanky
+    # print(cp_sad.sentiment()) # Cannot detect sentiment (y tho?)
+    # print(cp_sad.posTags())
 
